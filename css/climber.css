@@ -1,0 +1,130 @@
+.climber * {
+	background-color: #ffd9b3;
+	border: 0 solid #4d2600;
+	position: absolute;
+	bottom: 0;
+}
+
+
+.bodyPart {
+	height: 100px;
+	width: 60px;
+	border-radius: 20px;
+	
+	bottom: 120px;
+	left: 100px;
+}
+
+
+.armPart {
+	height: 66px;
+	width: 16px;
+	border-radius: 20px;
+	background-color: red;
+}
+
+.legPart {
+	height: 125px;
+	width: 18px;
+	border-radius: 20px;
+	background-color: green;
+}
+
+.headPart {
+	height: 40px;
+	width:	40px;
+	bottom: 100px;
+	left: 10px;
+	border-radius: 50%;
+}
+
+
+
+/*arms*/
+.upperLeft {
+	top: 8px;
+	left: 0px;
+	transform: rotate(145deg);
+	transform-origin: 50% 12%;
+}
+
+.upperRight {
+	top: 8px;
+	left: 44px;
+	transform: rotate(330deg);
+	transform-origin: 50% 12%;
+}
+
+.upperLeft .lowerLeft {
+	bottom: -50px;
+	left: 0px;
+	transform: rotate(30deg);
+	transform-origin:  50% 12%;
+}
+
+.upperRight .lowerRight {
+	bottom: -50px;
+	left: 0px;
+	transform: rotate(-145deg);
+	transform-origin: 50% 12%;
+}
+
+
+/*legs*/
+.rightLeg {
+	left: 42px;
+	top: 82px;
+	transform: rotate(0deg);
+	transform-origin: 50% 15%;
+}
+
+.leftLeg {
+	left: 0px;
+	top: 82px;
+	transform: rotate(10deg);
+	transform-origin: 50% 15%;
+}
+
+
+
+.climber:hover .upperRight {
+	animation: URRotate 1s linear infinite;
+}
+@keyframes URRotate {
+	0% { transform: rotate(initial); }
+	50% { transform: rotate(200deg); }
+	100% { transform: rotate(initial); }
+}
+
+.climber:hover .lowerRight {
+	animation: LRRotate 1s linear infinite;
+}
+@keyframes LRRotate {
+	0% { transform: rotate(initial); }
+	50% { transform: rotate(0deg); } /*this goes to 0 degrees relative to parent element*/
+	100% { transform: rotate(initial); }
+}
+
+.climber:hover	.upperLeft {
+	animation: ULRotate 1s linear infinite;
+}
+@keyframes ULRotate {
+	0% { transform: rotate(initial); }
+	50% { transform: rotate(30deg); }
+	100% { transform: rotate(initial); }
+}
+
+.climber:hover	.lowerLeft {
+	animation: LLRotate 1s linear infinite;
+}
+@keyframes LLRotate {
+	0% { transform: rotate(initial); }
+	50% { transform: rotate(130deg); }
+	100% { transform: rotate(initial); }
+}
+
+
+
+
+
+
