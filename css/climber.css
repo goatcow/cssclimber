@@ -1,10 +1,20 @@
+body {
+	background-image: url("arapiles.jpg");
+	background-repeat: no-repeat;
+	background-size: cover
+}
+
 .climber * {
 	background-color: #ffd9b3;
 	border: 0 solid #4d2600;
 	position: absolute;
-	bottom: 0;
 }
 
+.climber {
+	position: absolute;
+	left: 50%;
+	bottom: 0px;
+}
 
 .bodyPart {
 	height: 100px;
@@ -86,6 +96,23 @@
 }
 
 
+.climber:hover	.bodyPart {
+		animation: climb 10s linear;
+}
+@keyframes climb {
+	0% { bottom: 120px; 
+		
+	}
+	50% { bottom: 75vh; 
+		
+	}
+	100% { bottom: 120px; 
+		
+	}
+}
+
+
+
 
 .climber:hover .upperRight {
 	animation: URRotate 1s linear infinite;
@@ -124,6 +151,25 @@
 }
 
 
+
+
+.climber:hover	.leftLeg {
+	animation: LLegRotate 1s linear infinite;
+}
+@keyframes LLegRotate {
+	0% { transform: rotate(initial); }
+	50% { transform: rotate(15deg); }
+	100% { transform: rotate(initial); }
+}
+
+.climber:hover	.rightLeg {
+	animation: RLegRotate 1s linear infinite;
+}
+@keyframes RLegRotate {
+	0% { transform: rotate(initial); }
+	50% { transform: rotate(-20deg); }
+	100% { transform: rotate(initial); }
+}
 
 
 
