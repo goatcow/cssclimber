@@ -6,6 +6,7 @@ body {
 
 .climber * {
 	background-color: #ffd9b3;
+	background: linear-gradient(to left, brown, white);
 	border: 0 solid #4d2600;
 	position: absolute;
 }
@@ -30,14 +31,12 @@ body {
 	height: 66px;
 	width: 16px;
 	border-radius: 20px;
-	background-color: red;
 }
 
 .legPart {
 	height: 125px;
 	width: 18px;
 	border-radius: 20px;
-	background-color: green;
 }
 
 .headPart {
